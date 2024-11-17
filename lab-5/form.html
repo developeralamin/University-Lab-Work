@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with Table Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .form-container {
+            width: 40%;
+            margin: auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+            background-color: #f9f6c9;
+        }
+        table {
+            width: 100%;
+        }
+        td {
+            padding: 5px;
+        }
+        input[type="text"], textarea, select {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        textarea {
+            resize: none;
+        }
+        .form-input {
+            display: flex;
+            justify-content: center;
+            gap: 23px;
+            border: 2px solid black;
+             margin-bottom: 7px;
+        }
+        input#female {
+        margin-left: 67px;
+        }
+        .gender-favorite {
+            display: flex;
+            justify-content: space-around;
+            border: 2px solid #1f1d1d;
+            margin-bottom: 7px;
+        }
+        .commonVal{
+            margin-left: 67%;
+        }
+        .buttons{
+            text-align: center;
+            padding: 15px;
+            border: 2px solid black;
+        }
+        .buttons input {
+            margin: 5px;
+            padding: 5px 15px;
+            border: 1px solid #1f1d1d;
+            border-radius: 4px;
+            cursor: pointer;
+            background-color: #ddd;
+        }
+        .buttons input:hover {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+                <div class="form-input">
+                    <div> 
+                        <table>
+                        <tr>
+                            <td><label for="name">Name:</label></td>
+                            <td><input type="text" id="name" name="name"></td>
+                       </tr>
+                        <tr>
+                            <td><label for="email">Email:</label></td>
+                            <td><input type="text" id="email" name="email"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="department">Department:</label></td>
+                            <td>
+                                <select id="department" name="department">
+                                    <option value="">[Select Any Value]</option>
+                                    <option value="department1">Department 1</option>
+                                    <option value="department2">Department 2</option>
+                                    <option value="department3">Department 3</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                  </div>
+                    <div>
+                        <table>
+                        <tr>
+                            <label for="comments">Comments:</label>
+                            <td><textarea id="comments" name="comments" rows="4"></textarea></td>
+                        </tr>
+                    </table>
+                    </div>
+                </div>
+               
+              <!-- gender and subject -->
+               <div class="gender-favorite">
+                 <div>
+                        <label>Gender:</label>
+                            <input type="radio" id="male" name="gender" value="male">
+                            <label for="male">Male</label><br>
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female">Female</label>
+                        
+                 </div>
+                    <div>    
+                        <label>Favourite Subject:</label>
+                        <input type="checkbox" id="f3026" name="subject" value="f3026">
+                        <label for="f3026">F3026</label><br>
+                        <input type="checkbox" id="f3038" class="commonVal" name="subject" value="f3038" checked>
+                        <label for="f3038">F3038</label><br>
+                        <input type="checkbox" id="f4106" class="commonVal" name="subject" value="f4106">
+                        <label for="f4106">F4106</label>       
+                    </div>
+               </div>
+               
+             <div class="buttons">
+                <input type="submit" value="Send Information">
+                <input type="reset" value="Clear All">
+             </div>
+    </div>
+</body>
+</html>
